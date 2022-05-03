@@ -1,0 +1,50 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == bigmobile {
+    @media (min-width: 600px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+/*********************
+Width height
+*********************/
+
+@mixin wh_ex($value) {
+  width: #{$value}px;
+  height: #{$value}px;
+}
+
+@mixin wh_px($width, $height) {
+  width: #{$width}px;
+  height: #{$height}px;
+}
+/*********************
+flex center
+*********************/
+
+@mixin flex_center($justify: flex-start, $align: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
