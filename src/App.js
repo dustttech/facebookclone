@@ -34,19 +34,19 @@ function App() {
         {/* NEWSFEED */}
         <Col className="content" span={14}>
           <Switch>
-            <Route exact path="facebookclone/">
+            <Route exact path="/">
               <Home className="content" />
             </Route>
-            <Route path="facebookclone/friendlist">
+            <Route path="/friendlist">
               <FriendRequest />
             </Route>
-            <Route path="facebookclone/watch">
+            <Route path="/watch">
               <WatchList />
             </Route>
-            <Route path="facebookclone/group">
+            <Route path="/group">
               <GroupNews />
             </Route>
-            <Route path="facebookclone/userinfo">
+            <Route path="/userinfo">
               <UserInfo />
             </Route>
           </Switch>
